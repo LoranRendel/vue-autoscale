@@ -1,0 +1,60 @@
+{
+  "name": "@loranrendel/vue-autoscale",
+  "version": "1.0.0",
+  "description": "Vue 3 component that fits a fixed-size canvas into the viewport using CSS zoom with a transform: scale() fallback",
+  "keywords": [
+    "vue",
+    "vue3",
+    "autoscale",
+    "fit to screen",
+    "zoom",
+    "scale",
+    "viewport"
+  ],
+  "homepage": "https://github.com/LoranRendel/vue-autoscale#readme",
+  "bugs": {
+    "url": "https://github.com/LoranRendel/vue-autoscale/issues"
+  },
+  "license": "MIT",
+  "author": "Loran A. Rendel <main@enjoytool.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoranRendel/vue-autoscale.git"
+  },
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json",
+    "type-check": "vue-tsc --noEmit",
+    "prepack": "pnpm run build"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/tsconfig": "^0.9.1",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4",
+    "vue": "^3.5.44",
+    "vue-tsc": "^3.3.13"
+  }
+}
