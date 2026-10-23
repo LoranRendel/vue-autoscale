@@ -24,7 +24,6 @@ pnpm add @loranrendel/vue-autoscale
 ```vue
 <script setup lang="ts">
 import { AutoScale } from '@loranrendel/vue-autoscale'
-import '@loranrendel/vue-autoscale/style.css'
 </script>
 
 <template>
@@ -33,6 +32,10 @@ import '@loranrendel/vue-autoscale/style.css'
   </AutoScale>
 </template>
 ```
+
+Styles are imported automatically by the package entry (requires a bundler
+that handles CSS imports, e.g. Vite). They are also available separately as
+`@loranrendel/vue-autoscale/style.css`.
 
 ### Props
 
